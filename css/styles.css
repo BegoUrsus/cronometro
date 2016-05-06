@@ -1,0 +1,185 @@
+* { user-select: none;           /* user-select, hace el objeto no seleccionable */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */    
+
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* anula feedback de color al hacer tap en link */
+    -webkit-tap-highlight-color: transparent;   /* similar anterior en algunos android */
+
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body { 
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 80px;
+  font-family: 'Oxygen', sans-serif;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+.navbar-brand {
+  font-family: 'Aclonica', sans-serif;
+}
+
+.navbar-inverse {
+  margin-bottom: 10px; 
+}
+
+.navbar-inverse .navbar-brand {
+  color: orange;
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+#nav-list a {
+  color: orange;
+  text-align: center;
+}
+
+#nav-list a:hover {
+  color: white;
+}
+
+#nav-list a span {
+  font-size: 1.6em;
+}
+
+.carousel-inner .item img,
+.carousel-inner .item img {
+  width: 80%;
+  margin: auto;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+.container .carousel-indicators .active { 
+  background-color:orange;
+}
+
+.container .carousel-indicators li { 
+  width: 12px;
+  height: 12px;
+  border: 1px solid orange;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.carousel-control .glyphicon-chevron-right{
+    right: 30%;
+}
+
+.carousel-control .glyphicon-chevron-left {
+    left: 30%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  height: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  background-color: #222222;
+  color: orange;
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.footer .texto-footer {
+  padding-top: 18px;
+  height: 60px;
+  vertical-align: middle;
+}
+
+.pagination {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.contenido {
+  //font-family: 'Aclonica', sans-serif;
+  background-color: #FFa500;
+  margin-top: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.contenido h1,
+.contenido h2
+{
+  padding: 10px;
+  padding-right: 10%;
+  padding-left: 10%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.contenido .wrapper ul {
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+}
+
+/* Para pantallas estrechas (menos de 640px) */
+@media screen and (max-width: 640px) {
+
+  .contenido h1{
+      font-size: 24px;
+    }
+
+  .contenido h2{
+      font-size: 16px;
+    }
+
+  .contenido .wrapper ul {
+    font-size: 14px;
+  }
+
+}
+
+/* Para pantallas muy estrechas (menos de 340px) */
+@media screen and (max-width: 340px) {
+
+  .contenido h1{
+      font-size: 5vw;
+    }
+
+  .contenido h2{
+      font-size: 4vw;
+    }
+
+  .contenido .wrapper ul {
+    font-size: 3.5vw;
+  }
+
+  .pagintation {
+      display: none;
+  }
+}
+
+
+
+
+
+
+
+
+

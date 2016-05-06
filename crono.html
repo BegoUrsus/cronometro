@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>
+		Cronómetro
+	</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="fonts/digital-7-mono.ttf">
+
+
+	<script src="js/zepto.min.js"></script>
+
+	<script src="js/touch.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+	<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="js/scripts-crono.js"></script>
+
+
+ 	<link href="css/bootstrap.css" rel="stylesheet">
+ 	<link rel="stylesheet" type="text/css" href="css/supernice.css">
+ 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/styles_crono.css">
+</head>
+<body>
+	<header class="container">
+		<nav class="navbar navbar-inverse ">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Cronómetro</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+
+	<div id="divsonido" class="container">
+		<button type="button" 
+			class="btn btn-default>" 
+			id="btnsonido">
+			<i class="glyphicon glyphicon-volume-off colorblack"></i>
+		</button>
+
+		<div id="paradas" class="dropdown navbar-righ">
+			<button type="button" 
+				class="btn btn-default dropdown-toggle" 
+				id="dropdown-paradas" 
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+	    		Paradas&nbsp;
+	    		<span id="badge_paradas" class="badge">0</span>&nbsp;
+	    		<span class="caret"></span>
+	  		</button>
+	  		<ul class="lista-tiempos dropdown-menu" aria-labelledby="dropdownMenu1">
+	  		</ul>
+		</div>
+	</div>
+
+
+	<div id="principal" class="container ejercicio">
+
+
+		<div id="contenedor_reloj" >
+			<div class="reloj"></div>
+		</div>
+
+		<div>
+			<h2 class="digital">
+				<span id="crono_mins">00</span>:<span id="crono_secs">00</span><span id="crono_cent">00</span>
+			</h2>
+		<div>
+
+		<div>
+	 		<button class="misbotones" type="button" id="cambiar">START</button>
+			<button class="misbotones" type="button" id="inicializar">RESET</button>
+		</div>
+	</div>
+
+
+
+
+	  <!-- footer -->
+  <div class="container footer">
+    <div class="pull-left texto-footer">
+      <p> Begoña Huidobro, 2016</p>
+    </div>
+  </div> <!--footer -->
+
+
+
+</body>
+
+
+
+</html>
