@@ -175,15 +175,15 @@ $(function () {
 			.attr("height", alto);
 
 		// Creamos los gradientes para el relleno de los círculos
-		var radialGradientIn = svg_princ.append("defs")
+		var radialGradientIn = svg_princ.append("svg:defs")
 			.append("radialGradient")
 			.attr("id", "radial-gradient-in");
 
-		radialGradientIn.append("stop")
+		radialGradientIn.append("svg:stop")
 			.attr("offset", "0%")
 			.attr("stop-color", "#fff");
 
-		radialGradientIn.append("stop")
+		radialGradientIn.append("svg:stop")
 			.attr("offset", "100%")
 			.attr("stop-color", "orange");
 
