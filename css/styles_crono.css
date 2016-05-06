@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'digital7';
-    src: url('../fonts/digital-7-mono.ttf');
-}
-
 * {
 	box-sizing: border-box;
 	margin-left: auto;
