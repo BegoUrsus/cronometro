@@ -464,7 +464,6 @@ $(function() {
 		// Cada segundo
 		if (milesimas % 1000 === 0) {
 			var segundos = milesimas / 1000;
-			sonando = true;
 			if (segundos > 0 && sonando) {
 				audiotick.muted = false;
 				audiotick.play();
