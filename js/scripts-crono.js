@@ -509,6 +509,7 @@ $(function() {
 		$('#cambiar').hide();
 		$('#inicializar').hide();
 		$("#principal").on("tap", function(e) {
+			audiotick.play();
 			cambiar();
 		});
 		$("#principal").on("swiperight", function(e) {
