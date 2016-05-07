@@ -169,6 +169,7 @@ $(function () {
 	function dibujaReloj() {
 
 		// Añadimos un SVG al div que tiene como clase "reloj" 
+		d3.select("svg").remove();
 		svg_princ = d3.selectAll(".reloj")
 			.append("svg:svg")
 			.attr("width", ancho)
