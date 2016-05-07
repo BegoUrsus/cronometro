@@ -509,8 +509,10 @@ $(function () {
 			cambiar();
 		});
 		$("#principal").on("swiperight", function(e) {
+			alert("swipe");
 			// sólo podemos inicializar si no está contando
 			if (!t) {
+				alert("no contando");
 				eliminaLista();
 				inicializar();
 			}
