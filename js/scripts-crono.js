@@ -11,8 +11,8 @@ $(function () {
 	var svg_princ, grupoReloj; 
 
 
-	ancho = $("#contenedor_reloj").width();
-	alto = $("#contenedor_reloj").height();
+	ancho = 200;
+	alto = 200;
 	offSetX = ancho / 2;
 	offSetY = alto / 2;
 
