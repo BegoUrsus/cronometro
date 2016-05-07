@@ -4,7 +4,7 @@ Cronómetro realizado utilizando HTML5, CSS3, jQuery y gráficos SVG.
 
 ##Capturas de pantalla
 
-![](screencap/captura01.PNG)] ![](screencap/captura02.PNG)]
+![](screencap/captura01.PNG) ![](screencap/captura02.PNG)
 
 ##Código y demo
 
