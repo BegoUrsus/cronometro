@@ -516,7 +516,7 @@ $(function() {
 			}
 			cambiar();
 		});
-		$("#principal").on("swiperight", function(e) {
+		$("#principal").on("swipeRight", function(e) {
 			if (!t) {
 				eliminaLista();
 				inicializar();
