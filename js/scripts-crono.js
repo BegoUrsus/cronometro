@@ -510,7 +510,10 @@ $(function() {
 		$('#cambiar').hide();
 		$('#inicializar').hide();
 		$("#principal").on("tap", function(e) {
-			if (!sonando) {
+			if (!t && sonando) {
+				// No está contando y el sonido está activado
+				// Hacemos un tick mudo, para que no nos de el error 
+				// "play() can only be initiated by a user gesture"
 				audiotick.muted = true;
 				audiotick.play();
 			}
