@@ -132,7 +132,7 @@ $(function() {
 		cargaLista();
 		muestraContParadas(contador);
 		//dibujaManecillas(f_valores(milesimas));
-		muestraHora(milesimas);
+		muestraTiempo(milesimas);
 		clearInterval(t);  
 
 	}
@@ -159,7 +159,7 @@ $(function() {
 		}
 	}
 	
-	function muestraHora(milesimas) {
+	function muestraTiempo(milesimas) {
 		var resultado = formateaTiempo(milesimas);
 
 		clm.html(resultado.strmins);
@@ -288,13 +288,11 @@ $(function() {
 		// ya que vamos a volver a dibujarlas
 		grupoReloj.selectAll(".clockhand").remove();
     
-		// Creamos 3 arco para dibujar las manecillas del reloj.
+		// Creamos 2 arco para dibujar las manecillas del reloj.
 		// Como los arcos tienen el mismo ángulo inicial y final, 
 		// dibujarán una línea en vez de un arco.
 		// Para calcular la posición de las manecillas, es decir,
-		// dicho "angulo", mapeamos los f_valores de segundos, minutos y horas a 
-		// radianes, gracias a las funciones scale**** que habíamos
-		// creado con anterioridad
+		// dicho "angulo", utilizamos las funciones scaleSegsMing
 
 		// Arco-línea de segundos
 		arcoSegundos = d3.svg.arc()
@@ -323,18 +321,20 @@ $(function() {
 				});
 
     
-		// Realmente es aquí donce se crean los 3 círculos svg
-		// mediante Daja joins.
+		// Realmente es aquí donce se crean los 2 arcos svg
+		// mediante data joins
 		// Básicamente lo que hace es lo siguiente:
-		// Tenemos 3 objetos en la variable data(seconds, minutes, hours) 
-		// que es el parámetro de la función.
-		// Y para cada uno de estos objetos, queremos crear su objeto SVG 
+		// Tenemos 3 objetos en la variable data(cents, seconds, minutes) 
+		// que es el parámetro de la función, pero realmente solo utilizaremos
+		// 2 de ellos, ya que no haremos una manecilla para las centésimas.
+		// Y para cada uno de estos dos objetos, queremos crear su objeto SVG 
 		// correspondiente. 
 		// Para ello los unimos llamando a la función data(), seguida de enter().
 		// En este momento procedemos a construir las manecillas mediante
 		// las funciones arc que hemos creado en el paso anterior.
-		// Tamien le asignamos la clase "clockhand", lo pintamos de negro y 
-		// según sea el dato le asignamos un acho de trazado u otro.
+		// Tamiben le asignamos la clase "clockhand", lo pintamos de negro o rojo y 
+		// le asignamos un acho de trazado u otro 
+		// según corresponda a minutos o segundos
 		grupoReloj.selectAll(".clockhand")
 			.data(data)
 			.enter()
@@ -459,7 +459,7 @@ $(function() {
 			parcial = 0;
 		}
 		if (milesimas % 10 === 0) {
-			muestraHora(milesimas);
+			muestraTiempo(milesimas);
 		}
 		// Cada segundo
 		if (milesimas % 1000 === 0) {
@@ -513,6 +513,7 @@ $(function() {
 				// No está contando y el sonido está activado
 				// Hacemos un tick mudo, para que no nos de el error 
 				// "play() can only be initiated by a user gesture"
+				// Este truco no se cuanto tiempo funcionará.
 				audiotick.muted = true;
 				audiotick.play();
 			}
