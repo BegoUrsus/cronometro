@@ -514,6 +514,7 @@ $(function () {
 				eliminaLista();
 				inicializar();
 			}
+			else alert("contando");
 		});
 	} else {
 		// pantalla no táctic; mostramos y activamos los botones;
