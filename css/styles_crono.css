@@ -109,7 +109,7 @@ h2.digital {
 	display: block;
 	color: #222;
 	background-color: orange;
-	font-family: 'Share Tech Mono', monospace;
+	font-family: m-1m, 'Share Tech Mono', monospace;
 	font-weight: 700;
 	padding: 8px;
 	border: solid 2px #333;
@@ -122,7 +122,7 @@ h2.digital span#crono_cent {
 }
 
 span.li_mins, span.li_secs, span.li_cent {
-	font-family: 'Share Tech Mono', monospace;
+	font-family: m-1m, 'Share Tech Mono', monospace;
 	font-size: 1.5em;
 }
 
