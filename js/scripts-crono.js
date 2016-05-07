@@ -508,6 +508,9 @@ $(function() {
 		$('#cambiar').hide();
 		$('#inicializar').hide();
 		$("#principal").on("tap", function(e) {
+			audiotick.muted = true;
+			audiotick.play();
+			audiotick.muted = false;
 			audionull.play();
 			cambiar();
 		});
