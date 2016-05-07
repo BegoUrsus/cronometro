@@ -474,7 +474,8 @@ $(function () {
 	function arrancar() { 
 		if (!estactil) {
 			$("#cambiar").html("STOP");
-			$("#inicializar").prop("disabled",true);
+//			$("#cambiar").width("200px");
+//			$("#inicializar").hide();
 		}
 		t=setInterval(mostrar, 10);
 	}
@@ -482,7 +483,8 @@ $(function () {
 	function parar() { 
 		if (!estactil) {
 			$("#cambiar").html("START");
-			$("#inicializar").prop("disabled",false);
+//			$("#cambiar").width("100px");
+//			$("#inicializar").show();
 		}
 		creaElemento(milesimas);
 		clearInterval(t);  
@@ -509,14 +511,8 @@ $(function () {
 			cambiar();
 		});
 		$("#principal").on("swiperight", function(e) {
-			alert("swipe");
-			// sólo podemos inicializar si no está contando
-			if (!t) {
-				alert("no contando");
-				eliminaLista();
-				inicializar();
-			}
-			else alert("contando");
+			eliminaLista();
+			inicializar();
 		});
 	} else {
 		// pantalla no táctic; mostramos y activamos los botones;
@@ -526,11 +522,8 @@ $(function () {
 		$('#cambiar').on('click', cambiar);
 		$('#inicializar').on('click', 
 			function() { 
-				if (!t) {
-					// sólo podemos inicializar si no está contando
-					eliminaLista();
-					inicializar();
-				}
+				eliminaLista();
+				inicializar();
 			});
 	}
 
