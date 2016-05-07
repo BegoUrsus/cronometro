@@ -465,8 +465,10 @@ $(function() {
 		if (milesimas % 1000 === 0) {
 			var segundos = milesimas / 1000;
 			sonando = true;
-			if (segundos > 0 && sonando)
+			if (segundos > 0 && sonando) {
+				audiotick.muted = false;
 				audiotick.play();
+			}
 		  	var data;
   			data = f_valores(milesimas);
   			return dibujaManecillas(data);
@@ -508,10 +510,10 @@ $(function() {
 		$('#cambiar').hide();
 		$('#inicializar').hide();
 		$("#principal").on("tap", function(e) {
-			audiotick.muted = true;
-			audiotick.play();
-			audiotick.muted = false;
-			audionull.play();
+			if (!sonando) {
+				audiotick.muted = true;
+				audiotick.play();
+			}
 			cambiar();
 		});
 		$("#principal").on("swiperight", function(e) {
