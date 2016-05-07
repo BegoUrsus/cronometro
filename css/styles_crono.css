@@ -161,6 +161,11 @@ button.misbotones:hover {
 	color: white;
 }
 
+button.misbotones[disabled]{
+    cursor: progress;
+    color: gray;
+}
+
 svg {
 	margin-bottom: 0;
 }
