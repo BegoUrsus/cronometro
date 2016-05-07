@@ -32,8 +32,6 @@ $(function() {
 	var estactil = false;
 	
 	var audiotick = new Audio('https://raw.githubusercontent.com/BegoUrsus/cronometro/gh-pages/assets/Tick-DeepFrozenApps-397275646.mp3');
-	audiotick.play();
-	
 	var sonando = true;
 
 	var arrParadas = [];
@@ -509,8 +507,9 @@ $(function() {
 		$('#cambiar').hide();
 		$('#inicializar').hide();
 		$("#principal").on("tap", function(e) {
-			audiotick.play();
 			cambiar();
+			if (sonando) 
+				audiotick.play();
 		});
 		$("#principal").on("swiperight", function(e) {
 			if (!t) {
