@@ -1,18 +1,19 @@
-#Cronómetro (Stopwatch)
+
+# Cronómetro (Stopwatch)
 
 Cronómetro realizado utilizando HTML5, CSS3, jQuery y gráficos SVG.
 
-##Capturas de pantalla
+## Capturas de pantalla
 
 ![](https://raw.githubusercontent.com/BegoUrsus/cronometro/master/screencap/captura01.PNG) ![](https://raw.githubusercontent.com/BegoUrsus/cronometro/master/screencap/captura02.PNG)
 
-##Código y demo
+## Código y demo
 
 [Demo](http://begoursus.github.io/cronometro/)
 
 [Ver código](https://github.com/BegoUrsus/cronometro/tree/gh-pages)
 
-##Uso
+## Uso
 
 > En pantallas táctiles los botones START/STOP y RESET no aparecen.
 > 
